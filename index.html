@@ -2,10 +2,63 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Booger</title>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
   </head>
   <body>
-    <h1>My Unit 1 Game</h1>
+    <div id="header">
+    <h1 class="text-center">-Booger-</h1>
+    <h2 class="text-center" id="roundDisplay"></h2>
+    <h2 class="text-center" id="scrambledDisplay"></h2>
+    <center><button id="shuffle">Shuffle</button></center>
+    </div>
 
+    <div id='player1' class="text-center">
+    <label for="player1input">Player 1:</label>
+    <input type="password" id="player1input">
+    <input type="submit" value="Submit" id="player1submit">
+    <p class="text-center" id="player1score"></p>
+    </div>
+
+    <div id="player2" class="text-center">
+    <label for="player2input">Player 2:</label>
+    <input type="password" id="player2input">
+    <input type="submit" value="Submit" id="player2submit">
+    <p class="text-center" id="player2score"></p>
+    </div>
+
+    <div class="text-center" id="winner"></div>
+
+    <div class="text-center" id="player1words"></div>
+    <div class="text-center" id="player2words"></div>
+
+    <center><button id="end-game">End Game</button>
+    <button id="new-game">New Game</button></center>
+
+    <center><button id="instructions">Instructions</button></center>
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p style="color:#B6D7FC; font-size: 40px;">GAME RULES</p>
+      <p>Form as many long words as you can from the given set of alphabets!<br>
+      Each player will receive points based on the number of letters used in their word.<br>
+      Eg. "food" gets 4 points, "bread" gets 5 points etc.<br>
+      You will receive extra points if your word contains "rare alphabets" such as "K", "J", "Q", "X" or "Z".<br>
+      BUT! Do note that you will not be able to play a word once it has been played by ANY player.<br>
+      Have fun and GOOD LUCK!</p>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="assets/js/dict.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
