@@ -170,16 +170,39 @@ $(document).ready(function(){
   function endGame() {
     console.log("game ended")
     if (player1score > player2score) {
-      document.getElementById('winner').textContent = "Player 1 wins!"
+      swal({
+        title: "Player 1 wins!",
+        text: "Player 1's words: " + player1Played.filter(Boolean).join(', ') + " (" + player1score + " points)"
+        + "\n" + "Player 2's words: " + player2Played.filter(Boolean).join(', ') + " (" + player2score + " points)",
+        imageUrl: "/Users/louisa/Documents/Pics/buny.png",
+        confirmButtonText: "New Game"
+      }, function(){
+        window.location.reload(true);
+        }
+      );
     } else if (player2score > player1score) {
-      document.getElementById('winner').textContent = "Player 2 wins!"
+      swal({
+        title: "Player 2 wins!",
+        text: "Player 1's words: " + player1Played.filter(Boolean).join(', ') + " (" + player1score + " points)"
+        + "\n" +"Player 2's words: " + player2Played.filter(Boolean).join(', ') + " (" + player2score + " points)",
+        imageUrl: "/Users/louisa/Documents/Pics/bb.png",
+        confirmButtonText: "New Game"
+      }, function(){
+        window.location.reload(true);
+        }
+      );
     } else {
-      document.getElementById('winner').textContent = "It's a tie!"
+      swal({
+        title: "It's a tie!",
+        text: "Player 1's words: " + player1Played.filter(Boolean).join(', ') + " (" + player1score + " points)"
+        + "\n" +"Player 2's words: " + player2Played.filter(Boolean).join(', ') + " (" + player2score + " points)",
+        imageUrl: "/Users/louisa/Documents/Pics/tie.png",
+        confirmButtonText: "New Game"
+      }, function(){
+        window.location.reload(true);
+        }
+      );
     }
-    document.getElementById('player1words').textContent = "Player 1's words: " + player1Played.filter(Boolean).join(', ')
-    console.log(player1Played)
-    document.getElementById('player2words').textContent = "Player 2's words: " + player2Played.filter(Boolean).join(', ')
-    console.log(player2Played)
   }
 
   $('#end-game').click(endGame)
