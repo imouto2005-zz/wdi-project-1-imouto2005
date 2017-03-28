@@ -35,7 +35,7 @@ h1 {
   border-width: 3px;
   font-size: 15px;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
 }
 #player1 label, #player2 label{
@@ -59,7 +59,7 @@ input[type="submit"] {
   border-width: 3px;
   font-size: 15px;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
 }
 #player1score, #player2score {
@@ -75,7 +75,7 @@ input[type="submit"] {
   border-width: 3px;
   font-size: 15px;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
 }
 #new-game {
@@ -86,7 +86,7 @@ input[type="submit"] {
   border-width: 3px;
   font-size: 15px;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
 }
 #instructions {
@@ -98,7 +98,7 @@ input[type="submit"] {
   border-width: 3px;
   font-size: 15px;
   color: #969696;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
 }
 .modal {

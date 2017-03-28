@@ -97,6 +97,19 @@ $(document).ready(function(){
     return str.length >= 3
   }
 
+  // adds extra points for "rarer" alphabets
+  function checkScores(str) {
+    counter = 0
+    str.split("").forEach(function(i) {
+      if (i === "z" || i === "x" || i === "q" || i === "j" || i === "k") {
+        counter += 5
+      } else if (i === "f" || i === "h" || i === "v" || i === "w" || i === "y") {
+        counter += 3
+      }
+    })
+    return str.length + counter
+  }
+
   // function to check if user input can be accepted:
   // 1. is from the alphabet pool
   // 2. is a valid dictionary entry (and not random gibberish)
@@ -130,7 +143,7 @@ $(document).ready(function(){
 
   function checkUserInput(str) {
     if (!checkStringChar(str)) {
-      swal("Hey you!","Please only use letters from the given set!", "error")
+      swal("Hey you!","Please only use letters from the given set.", "error")
       player1Played.push($('#player1input').val())
       player2Played.push($('#player2input').val())
       $('#player1input').val("")
@@ -142,39 +155,37 @@ $(document).ready(function(){
       $('#player1input').val("")
       $('#player2input').val("")
     } else if (!checkPreviouslyPlayed(str)) {
-      swal("Oppsy!", "That word has already been played!", "error")
+      swal("Oppsy!", "That word has already been played.", "error")
       player1Played.push($('#player1input').val())
       player2Played.push($('#player2input').val())
       $('#player1input').val("")
       $('#player2input').val("")
     } else if (!checkMinLength(str)) {
-      swal("O dear","Your word is too short.", "error")
+      swal("O dear","Your word is too short!", "error")
       player1Played.push($('#player1input').val())
       player2Played.push($('#player2input').val())
       $('#player1input').val("")
       $('#player2input').val("")
     } else {
-      // swal("Good job, your answer has been accepted!")
       swal("Good job!", "Your answer has been accepted!", "success");
 
-      player1score += $('#player1input').val().length
+      // player1score += $('#player1input').val().length
+      player1score += checkScores($('#player1input').val())
+      console.log(checkScores($('#player1input').val()))
       player1Played.push($('#player1input').val())
       document.getElementById('player1score').textContent = "Score: " + player1score
       $('#player1input').val("")
 
-      player2score += $('#player2input').val().length
+      // player2score += $('#player2input').val().length
+      player2score += checkScores($('#player2input').val())
       player2Played.push($('#player2input').val())
       document.getElementById('player2score').textContent = "Score: " +player2score
       $('#player2input').val("")
     }
-    // player1Played.push($('#player1input').val())
-    // player2Played.push($('#player2input').val())
     if (player1Counter === desiredRounds && player2Counter === desiredRounds) { //game ends after 3 round
-      // console.log("no more rounds")
       endGame();
     }
   }
-
 
   function resetGame() {
     window.location.reload(true);
@@ -227,19 +238,4 @@ $(document).ready(function(){
       document.getElementById('roundDisplay').textContent = "GAME OVER"
     }
   })
-
-  // $('#player1submit').keydown(function(e) {
-  //   if (e.keyCode == 13) {
-  //       $('#player1submit').submit(function() {
-  //         if (player1Counter === player2Counter) {
-  //           player1Counter++
-  //           console.log("player 1 counter:" + player1Counter)
-  //           checkUserInput($('#player1input').val())
-  //         } else {
-  //           swal("Player 2 has not played yet!")
-  //           $('#player1input').val("")
-  //         }
-  //       })
-  //   };
-  // });
 })
