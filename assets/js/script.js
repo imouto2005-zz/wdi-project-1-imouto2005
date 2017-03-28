@@ -5,9 +5,9 @@ $(document).ready(function(){
   var player2Played = []
   var player1Counter = 0
   var player2Counter = 0
-  var desiredRounds = 3/*parseInt(prompt("How many rounds do you want to play? Please enter a NUMBER ONLY AH later cannot work then idk how ah"))*/
+  var desiredRounds = 3
   var round = 1
-  document.getElementById('roundDisplay').textContent = "Round 1"
+  document.getElementById('roundDisplay').textContent = "Round 1 of " + desiredRounds
 
   // modal for instructions
   var modal = document.getElementById('myModal');
@@ -115,32 +115,6 @@ $(document).ready(function(){
   // 2. is a valid dictionary entry (and not random gibberish)
   // 3. is not a word that has been submitted by a player before
   // 4. word must be at least 3 characters long
-
-  // function checkUserInput(str) {
-  //   if (checkStringChar(str) && checkValidWord(str) && checkPreviouslyPlayed(str) && checkMinLength(str)) {
-  //     swal("Good job, your answer has been accepted!")
-
-  //     player1score += $('#player1input').val().length
-  //     player1Played.push($('#player1input').val())
-  //     document.getElementById('player1score').textContent = player1score
-  //     $('#player1input').val("")
-
-  //     player2score += $('#player2input').val().length
-  //     player2Played.push($('#player2input').val())
-  //     document.getElementById('player2score').textContent = player2score
-  //     $('#player2input').val("")
-
-  //     // console.log(player1score)
-  //   } else {
-  //     swal("Sorry, your answer is unacceptable :(")
-  //     $('#player1input').val("")
-  //     $('#player2input').val("")
-  //   }
-  //   if (player1Counter === 5 && player2Counter === 5) {
-  //     endGame();
-  //   }
-  // }
-
   function checkUserInput(str) {
     if (!checkStringChar(str)) {
       swal("Hey you!","Please only use letters from the given set.", "error")
@@ -231,7 +205,7 @@ $(document).ready(function(){
       $('#player2input').val("")
     }
     round++ // for displaying each round on the page
-    document.getElementById('roundDisplay').textContent = "Round " + round
+    document.getElementById('roundDisplay').textContent = "Round " + round + " of " + desiredRounds
     console.log("p2 clicked")
     console.log(player2Counter)
     if (player2Counter === desiredRounds) {
@@ -239,3 +213,29 @@ $(document).ready(function(){
     }
   })
 })
+
+
+  // function checkUserInput(str) {
+  //   if (checkStringChar(str) && checkValidWord(str) && checkPreviouslyPlayed(str) && checkMinLength(str)) {
+  //     swal("Good job, your answer has been accepted!")
+
+  //     player1score += $('#player1input').val().length
+  //     player1Played.push($('#player1input').val())
+  //     document.getElementById('player1score').textContent = player1score
+  //     $('#player1input').val("")
+
+  //     player2score += $('#player2input').val().length
+  //     player2Played.push($('#player2input').val())
+  //     document.getElementById('player2score').textContent = player2score
+  //     $('#player2input').val("")
+
+  //     // console.log(player1score)
+  //   } else {
+  //     swal("Sorry, your answer is unacceptable :(")
+  //     $('#player1input').val("")
+  //     $('#player2input').val("")
+  //   }
+  //   if (player1Counter === 5 && player2Counter === 5) {
+  //     endGame();
+  //   }
+  // }
