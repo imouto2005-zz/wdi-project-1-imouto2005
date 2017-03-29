@@ -35,6 +35,10 @@ No points will be awarded if a word has been played by ANY player in the same ga
 
 ## Development
 
+#### **Checklists**
+I would always have a checklist of tasks beside me as I was working on my game. I feel that it is a good way for me to keep track of all the things that need to be done and helped me avoid feeling overwhelmed. 
+![checklists](assets/img/checklist.png)
+
 #### **First Version**
 Two players competing to form the longest word from the given alphabet pool.
 
@@ -52,7 +56,5 @@ Two players competing to form the longest word from the given alphabet pool.
 * [SweetAlert](http://t4t5.github.io/sweetalert/)
 
 ## Acknowledgements
-
-This game could not have been made without the help of:
 
 [:)](https://github.com/siawyoung) 
