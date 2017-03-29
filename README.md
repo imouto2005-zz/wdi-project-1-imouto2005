@@ -2,7 +2,7 @@
 
 A game like Boggle but not really.
 
-[Play it here :3](https://wdi-sg.github.io/wdi-project-1-imouto2005/)!
+[Play it here :3](https://wdi-sg.github.io/wdi-project-1-imouto2005/)
 
 ## Gameplay
 
@@ -27,6 +27,18 @@ No points will be awarded if a word has been played by ANY player in the same ga
 
 ## Workflow
 
+1. Brainstorm and come up with game logic
+2. Convert dictionary into JSON object
+3. Write game logic code
+4. Add in styling once the game is working
+5. Adding in small, extra features to improve the game experience
+
+## Development
+
+#### **First Version**
+Two players competing to form the longest word from the given alphabet pool.
+
+
 ## Authors
 
 * **ME** - [imouto2005](https://github.com/imouto2005)
@@ -36,12 +48,11 @@ No points will be awarded if a word has been played by ANY player in the same ga
 * [How do I read files in node.js?](https://docs.nodejitsu.com/articles/file-system/how-to-read-files-in-nodejs/)
 * [How do I write files in node.js?](https://docs.nodejitsu.com/articles/file-system/how-to-write-files-in-nodejs/)
 * [Fisher-Yates Algorithm: The Logic Behind Shuffling](https://medium.com/@thelextimes/fisher-yates-algorithm-the-logic-behind-shuffling-98deb8bac210)
-* [SweetAlert](http://t4t5.github.io/sweetalert/)
-* [Dictionary Generator](http://app.aspell.net/create)
 * [How To Make a Modal Box With CSS and JavaScript](https://www.w3schools.com/howto/howto_css_modals.asp)
+* [SweetAlert](http://t4t5.github.io/sweetalert/)
 
 ## Acknowledgements
 
 This game could not have been made without the help of:
 
-* [:)](https://github.com/siawyoung) 
+[:)](https://github.com/siawyoung) 
