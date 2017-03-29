@@ -50,7 +50,7 @@ $(document).ready(function(){
   var joinedString = fourLetters.join('').toUpperCase();
   String.prototype.shuffle = function() {
       var allCharacters = this.split(""),
-          n = allCharacters.length;
+          n = allCharacters.length; //number of characters in the array
 
       for(var i = n - 1; i > 0; i--) {
           var j = Math.floor(Math.random() * (i + 1));
