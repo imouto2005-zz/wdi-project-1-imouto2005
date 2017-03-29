@@ -122,28 +122,32 @@ $(document).ready(function(){
       player2Played.push($('#player2input').val())
       $('#player1input').val("")
       $('#player2input').val("")
+      new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkValidWord(str)) {
       swal("Uh oh!", "It seems like that's not a valid word.", "error")
       player1Played.push($('#player1input').val())
       player2Played.push($('#player2input').val())
       $('#player1input').val("")
       $('#player2input').val("")
+      new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkPreviouslyPlayed(str)) {
       swal("Oppsy!", "That word has already been played.", "error")
       player1Played.push($('#player1input').val())
       player2Played.push($('#player2input').val())
       $('#player1input').val("")
       $('#player2input').val("")
+      new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkMinLength(str)) {
       swal("O dear","Your word is too short!", "error")
       player1Played.push($('#player1input').val())
       player2Played.push($('#player2input').val())
       $('#player1input').val("")
       $('#player2input').val("")
+      new Audio('assets/sound/goatscream.mp3').play()
     } else {
       swal("Good job!", "Your answer has been accepted!", "success");
+      new Audio('assets/sound/yes.mp3').play()
 
-      // player1score += $('#player1input').val().length
       player1score += checkScores($('#player1input').val())
       console.log(checkScores($('#player1input').val()))
       player1Played.push($('#player1input').val())
