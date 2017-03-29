@@ -175,7 +175,7 @@ $(document).ready(function(){
         title: "Player 1 wins!",
         text: "Player 1's words: " + player1Played.filter(Boolean).join(', ') + " (" + player1score + " points)"
         + "\n" + "Player 2's words: " + player2Played.filter(Boolean).join(', ') + " (" + player2score + " points)",
-        imageUrl: "/Users/louisa/Documents/Pics/buny.png",
+        imageUrl: "assets/img/buny.png",
         confirmButtonText: "New Game"
       }, function(){
         window.location.reload(true);
@@ -186,7 +186,7 @@ $(document).ready(function(){
         title: "Player 2 wins!",
         text: "Player 1's words: " + player1Played.filter(Boolean).join(', ') + " (" + player1score + " points)"
         + "\n" +"Player 2's words: " + player2Played.filter(Boolean).join(', ') + " (" + player2score + " points)",
-        imageUrl: "/Users/louisa/Documents/Pics/bb.png",
+        imageUrl: "assets/img/bb.png",
         confirmButtonText: "New Game"
       }, function(){
         window.location.reload(true);
@@ -197,7 +197,7 @@ $(document).ready(function(){
         title: "It's a tie!",
         text: "Player 1's words: " + player1Played.filter(Boolean).join(', ') + " (" + player1score + " points)"
         + "\n" +"Player 2's words: " + player2Played.filter(Boolean).join(', ') + " (" + player2score + " points)",
-        imageUrl: "/Users/louisa/Documents/Pics/tie.png",
+        imageUrl: "assets/img/tie.png",
         confirmButtonText: "New Game"
       }, function(){
         window.location.reload(true);
