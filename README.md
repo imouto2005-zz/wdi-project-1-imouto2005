@@ -1,10 +1,7 @@
 # Booger
+![booger](assets/img/booger.png)
 
 A game like Boggle but not really.
-
-[Play it here :3](https://wdi-sg.github.io/wdi-project-1-imouto2005/)
-
-## Gameplay
 
 Form as many long words as you can from the given set of alphabets!
 
@@ -17,6 +14,17 @@ Eg. "kick" gets 4 + 5 + 5 = 14 points, "wave" gets 4 + 3 + 3 = 10 points
 Any words less than three characters long will be considered invalid.
       
 No points will be awarded if a word has been played by ANY player in the same game, so be sure to play all your best possible words as early in the game as possible! 
+
+[Play it here :3](https://wdi-sg.github.io/wdi-project-1-imouto2005/)
+
+## Gameplay
+
+Text inputs will rotate between the two players according to their turn.
+
+The input field has been set to password to prevent players from copying their opponent's answers.
+
+Scores will be tabulated according to the above guide and a winner will be declared at the end of three rounds.
+
 
 ## Built With
 
@@ -36,12 +44,22 @@ No points will be awarded if a word has been played by ANY player in the same ga
 ## Development
 
 #### **Checklists**
-I would always have a checklist of tasks beside me as I was working on my game. I feel that it is a good way for me to keep track of all the things that need to be done and helped me avoid feeling overwhelmed. 
+I would always have a checklist of tasks beside me as I was working on my game. I feel that it is a good way for me to keep track of all the things that need to be done and has helped me avoid feeling overwhelmed. 
 ![checklists](assets/img/checklist.png)
+
+#### **Rough sketches**
+![first](assets/img/preliminary.png)
+vs
+![final](assets/img/final.png)
 
 #### **First Version**
 Two players competing to form the longest word from the given alphabet pool.
 
+#### **Second Version**
+Two players competing to form as many words as they can. The first player who is unable to form more words loses the game.
+
+#### **Third Version**
+Two players competing to get the most number of points within a fixed number of rounds that are awarded according to a scoring system. 
 
 ## Authors
 
