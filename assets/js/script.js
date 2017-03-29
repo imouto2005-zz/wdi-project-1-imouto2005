@@ -236,29 +236,3 @@ $(document).ready(function(){
     }
   })
 })
-
-
-  // function checkUserInput(str) {
-  //   if (checkStringChar(str) && checkValidWord(str) && checkPreviouslyPlayed(str) && checkMinLength(str)) {
-  //     swal("Good job, your answer has been accepted!")
-
-  //     player1score += $('#player1input').val().length
-  //     player1Played.push($('#player1input').val())
-  //     document.getElementById('player1score').textContent = player1score
-  //     $('#player1input').val("")
-
-  //     player2score += $('#player2input').val().length
-  //     player2Played.push($('#player2input').val())
-  //     document.getElementById('player2score').textContent = player2score
-  //     $('#player2input').val("")
-
-  //     // console.log(player1score)
-  //   } else {
-  //     swal("Sorry, your answer is unacceptable :(")
-  //     $('#player1input').val("")
-  //     $('#player2input').val("")
-  //   }
-  //   if (player1Counter === 5 && player2Counter === 5) {
-  //     endGame();
-  //   }
-  // }
