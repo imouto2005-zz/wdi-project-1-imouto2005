@@ -7,6 +7,7 @@ $(document).ready(function(){
   var player2Counter = 0
   var desiredRounds = 3
   var round = 1
+  $("#player2").slideToggle();
   document.getElementById('roundDisplay').textContent = "Round 1 of " + desiredRounds
 
   // modal for instructions
@@ -214,6 +215,9 @@ $(document).ready(function(){
       player1Counter++
       console.log("player 1 counter:" + player1Counter)
       checkUserInput($('#player1input').val())
+      $("#player1").slideToggle();
+      $("#player2").slideToggle();
+      // $("#player2").slideToggle();
     } else {
       swal("Hey you!","Player 2 has not played yet!", "error")
       $('#player1input').val("")
@@ -223,14 +227,14 @@ $(document).ready(function(){
     if (player1Counter - player2Counter === 1) {
       player2Counter++
       checkUserInput($('#player2input').val())
+      $("#player2").slideToggle();
+      $("#player1").slideToggle();
     } else {
-      swal("Hey you!","Player 2 has not played yet!", "error")
+      swal("Hey you!","Player 1 has not played yet!", "error")
       $('#player2input').val("")
     }
     round++ // for displaying each round on the page
     document.getElementById('roundDisplay').textContent = "Round " + round + " of " + desiredRounds
-    console.log("p2 clicked")
-    console.log(player2Counter)
     if (player2Counter === desiredRounds) {
       document.getElementById('roundDisplay').textContent = "GAME OVER"
     }
