@@ -48,9 +48,7 @@ I would always have a checklist of tasks beside me as I was working on my game. 
 ![checklists](assets/img/checklist.png)
 
 #### **Rough sketches**
-![first](assets/img/preliminary.png)
-vs
-![final](assets/img/final.png)
+[sketches](assets/img/comparison.png)
 
 #### **First Version**
 Two players competing to form the longest word from the given alphabet pool.
