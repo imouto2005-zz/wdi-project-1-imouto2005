@@ -23,14 +23,18 @@
 
     <div id='player1' class="text-center">
     <label for="player1input">Player 1:</label>
-    <input type="password" id="player1input" placeholder="your answer here">
+    <input type="password" id="player1input" placeholder="your answer here" onkeydown = "if (event.keyCode == 13)
+                        {document.getElementById('player1submit').click()
+                        return false}" >
     <input type="submit" value="Submit" id="player1submit">
     <p class="text-center" id="player1score"></p>
     </div>
 
     <div id="player2" class="text-center">
     <label for="player2input">Player 2:</label>
-    <input type="password" id="player2input" placeholder="your answer here">
+    <input type="password" id="player2input" placeholder="your answer here" onkeydown = "if (event.keyCode == 13)
+                        {document.getElementById('player2submit').click()
+                        return false}" >
     <input type="submit" value="Submit" id="player2submit">
     <p class="text-center" id="player2score"></p>
     </div>
@@ -53,10 +57,10 @@
       Eg. "food" gets 4 points, "bread" gets 5 points<br><br>
       "Rare" characters such as "Q", "Z", "X", "J", "K" or "F", "H", "V", "W", "Y"<br>
       will get you an extra 5 or 3 points respectively.<br>
-      Eg. "kick" gets 4 + 5 + 5 = 10 points, "wave" gets 4 + 3 + 3 = 10 points<br><br>
+      Eg. "kick" gets 4 + 5 + 5 = 14 points, "wave" gets 4 + 3 + 3 = 10 points<br><br>
       Any words less than three characters long will be considered invalid.<br><br>
       No points will be awarded if a word has been played by ANY player in the same game,<br>
-      so be sure to play all your best possible words as early in the game as possible. <br><br>
+      so be sure to play all your best possible words as early in the game as possible! <br><br>
       Have fun and GOOD LUCK! :)</p>
     </div>
     </div>
