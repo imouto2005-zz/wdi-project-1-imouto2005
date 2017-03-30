@@ -263,16 +263,6 @@ $(document).ready(function(){
       checkUserInput($('#player1input').val())
       $("#player1").slideToggle();
       $("#player2").slideToggle();
-      // $('body').on('focus', '#player2input', function() {})
-
-      //$(function(){
-//     $('a#newForm').click(function() {
-//         $('ul.form').slideToggle('500', function() {
-//             $('#titleHolder #objectProfile').focus()
-//         });
-//     });
-// });
-      // document.getElementById('player2input').focus()
     } else {
       swal("Hey you!","Player 2 has not played yet!", "error")
       $('#player1input').val("")
