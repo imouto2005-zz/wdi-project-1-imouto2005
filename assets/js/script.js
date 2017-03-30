@@ -8,6 +8,7 @@ $(document).ready(function(){
   var desiredRounds = 3
   var round = 1
   $("#player2").slideToggle();
+  $('body').on('focus', '#player1input', function() {})
   document.getElementById('roundDisplay').textContent = "Round 1 of " + desiredRounds
 
   // modal for instructions
@@ -118,35 +119,80 @@ $(document).ready(function(){
   // 4. word must be at least 3 characters long
   function checkUserInput(str) {
     if (!checkStringChar(str)) {
-      swal("Hey you!","Please only use letters from the given set.", "error")
+      // swal("Hey you!","Please only use letters from the given set.", "error")
+      swal({
+          title: "Hey you!",
+          text: "Please only use letters from the given set.",
+          type: "error",
+        }, function(){
+            $('#player1input').focus();
+            $('#player2input').focus();
+          }
+        );
       player1Played.push($('#player1input').val())
       player2Played.push($('#player2input').val())
       $('#player1input').val("")
       $('#player2input').val("")
       new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkValidWord(str)) {
-        swal("Uh oh!", "It seems like that's not a valid word.", "error")
+        // swal("Uh oh!", "It seems like that's not a valid word.", "error")
+        swal({
+          title: "Uh oh!",
+          text: "It seems like that's not a valid word.",
+          type: "error",
+        }, function(){
+            $('#player1input').focus();
+            $('#player2input').focus();
+          }
+        );
         player1Played.push($('#player1input').val())
         player2Played.push($('#player2input').val())
         $('#player1input').val("")
         $('#player2input').val("")
         new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkPreviouslyPlayed(str)) {
-        swal("Oppsy!", "That word has already been played.", "error")
+        // swal("Oppsy!", "That word has already been played.", "error")
+        swal({
+          title: "Oppsy!",
+          text: "That word has already been played.",
+          type: "error",
+        }, function(){
+            $('#player1input').focus();
+            $('#player2input').focus();
+          }
+        );
         player1Played.push($('#player1input').val())
         player2Played.push($('#player2input').val())
         $('#player1input').val("")
         $('#player2input').val("")
         new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkMinLength(str)) {
-        swal("O dear!","Your word is too short.", "error")
+        // swal("O dear!","Your word is too short.", "error")
+        swal({
+          title: "O dear!",
+          text: "Your word is too short.",
+          type: "error",
+        }, function(){
+          $('#player1input').focus();
+          $('#player2input').focus();
+          }
+        );
         player1Played.push($('#player1input').val())
         player2Played.push($('#player2input').val())
         $('#player1input').val("")
         $('#player2input').val("")
         new Audio('assets/sound/goatscream.mp3').play()
     } else {
-        swal("Good job!", "Your answer has been accepted!", "success");
+        // swal("Good job!", "Your answer has been accepted!", "success");
+        swal({
+          title: "Good job!",
+          text: "Your answer has been accepted!",
+          type: "success",
+        }, function(){
+            $('#player1input').focus();
+            $('#player2input').focus();
+          }
+        );
         new Audio('assets/sound/yes.mp3').play()
 
         player1score += checkScores($('#player1input').val())
@@ -172,7 +218,6 @@ $(document).ready(function(){
   $('#new-game').click(resetGame)
 
   function endGame() {
-    console.log("game ended")
     if (player1score > player2score) {
       swal({
         title: "Player 1 wins!",
@@ -192,7 +237,7 @@ $(document).ready(function(){
         imageUrl: "assets/img/bb.png",
         confirmButtonText: "New Game"
       }, function(){
-        window.location.reload(true);
+          window.location.reload(true);
         }
       );
     } else {
@@ -203,7 +248,7 @@ $(document).ready(function(){
         imageUrl: "assets/img/tie.png",
         confirmButtonText: "New Game"
       }, function(){
-        window.location.reload(true);
+          window.location.reload(true);
         }
       );
     }
@@ -218,6 +263,16 @@ $(document).ready(function(){
       checkUserInput($('#player1input').val())
       $("#player1").slideToggle();
       $("#player2").slideToggle();
+      // $('body').on('focus', '#player2input', function() {})
+
+      //$(function(){
+//     $('a#newForm').click(function() {
+//         $('ul.form').slideToggle('500', function() {
+//             $('#titleHolder #objectProfile').focus()
+//         });
+//     });
+// });
+      // document.getElementById('player2input').focus()
     } else {
       swal("Hey you!","Player 2 has not played yet!", "error")
       $('#player1input').val("")

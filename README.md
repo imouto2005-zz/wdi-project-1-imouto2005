@@ -10,10 +10,10 @@ Eg. "food" gets 4 points, "bread" gets 5 points
 
 "Rare" characters such as "Q", "Z", "X", "J", "K" or "F", "H", "V", "W", "Y" will get you an extra 5 or 3 points respectively.
 Eg. "kick" gets 4 + 5 + 5 = 14 points, "wave" gets 4 + 3 + 3 = 10 points
-      
+
 Any words less than three characters long will be considered invalid.
-      
-No points will be awarded if a word has been played by ANY player in the same game, so be sure to play all your best possible words as early in the game as possible! 
+
+No points will be awarded if a word has been played by ANY player in the same game, so be sure to play all your best possible words as early in the game as possible!
 
 [Play it here :3](https://wdi-sg.github.io/wdi-project-1-imouto2005/)
 
@@ -44,7 +44,7 @@ Scores will be tabulated according to the above guide and a winner will be decla
 ## Development
 
 #### **Checklists**
-I would always have a checklist of tasks beside me as I was working on my game. I feel that it is a good way for me to keep track of all the things that need to be done and has helped me avoid feeling overwhelmed. 
+I would always have a checklist of tasks beside me as I was working on my game. I feel that it is a good way for me to keep track of all the things that need to be done and has helped me avoid feeling overwhelmed.
 ![checklists](assets/img/checklist.png)
 
 #### **Rough sketches**
@@ -57,7 +57,7 @@ Two players competing to form the longest word from the given alphabet pool.
 Two players competing to form as many words as they can. The first player who is unable to form more words loses the game.
 
 #### **Third Version**
-Two players competing to get the most number of points within a fixed number of rounds that are awarded according to a scoring system. 
+Two players competing to get the most number of points within a fixed number of rounds that are awarded according to a scoring system.
 
 ## Authors
 
@@ -70,7 +70,8 @@ Two players competing to get the most number of points within a fixed number of 
 * [Fisher-Yates Algorithm: The Logic Behind Shuffling](https://medium.com/@thelextimes/fisher-yates-algorithm-the-logic-behind-shuffling-98deb8bac210)
 * [How To Make a Modal Box With CSS and JavaScript](https://www.w3schools.com/howto/howto_css_modals.asp)
 * [SweetAlert](http://t4t5.github.io/sweetalert/)
+* [Dictionary](http://app.aspell.net/create)
 
 ## Acknowledgements
 
-[:)](https://github.com/siawyoung) 
+[:)](https://github.com/siawyoung)
