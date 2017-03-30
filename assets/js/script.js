@@ -99,6 +99,13 @@ $(document).ready(function(){
     return str.length >= 3
   }
 
+  function checkForInput(str) {
+    if (str === "") {
+      return false
+    }
+    return true
+  }
+
   // adds extra points for "rarer" alphabets
   function checkScores(str) {
     counter = 0
@@ -134,7 +141,23 @@ $(document).ready(function(){
       $('#player1input').val("")
       $('#player2input').val("")
       new Audio('assets/sound/goatscream.mp3').play()
-    } else if (!checkValidWord(str)) {
+    } else if (!checkForInput(str)) {
+        // swal("O dear!","Your word is too short.", "error")
+        swal({
+          title: "BOO",
+          text: "You just forfeited your turn because you did not submit an answer!",
+          type: "error",
+        }, function(){
+          $('#player1input').focus();
+          $('#player2input').focus();
+          }
+        );
+        player1Played.push($('#player1input').val())
+        player2Played.push($('#player2input').val())
+        $('#player1input').val("")
+        $('#player2input').val("")
+        new Audio('assets/sound/goatscream.mp3').play()
+      } else if (!checkValidWord(str)) {
         // swal("Uh oh!", "It seems like that's not a valid word.", "error")
         swal({
           title: "Uh oh!",
