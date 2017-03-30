@@ -8,7 +8,6 @@ $(document).ready(function(){
   var desiredRounds = 3
   var round = 1
   $("#player2").slideToggle();
-  $('body').on('focus', '#player1input', function() {})
   document.getElementById('roundDisplay').textContent = "Round 1 of " + desiredRounds
 
   // modal for instructions
@@ -87,6 +86,7 @@ $(document).ready(function(){
     return dictionary.hasOwnProperty(str)
   }
 
+  // function to check if a word has been played
   function checkPreviouslyPlayed(str) {
     if (player1Played.indexOf(str) > -1 || player2Played.indexOf(str) > -1) {
       return false
@@ -126,7 +126,6 @@ $(document).ready(function(){
   // 4. word must be at least 3 characters long
   function checkUserInput(str) {
     if (!checkStringChar(str)) {
-      // swal("Hey you!","Please only use letters from the given set.", "error")
       swal({
           title: "Hey you!",
           text: "Please only use letters from the given set.",
@@ -142,7 +141,6 @@ $(document).ready(function(){
       $('#player2input').val("")
       new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkForInput(str)) {
-        // swal("O dear!","Your word is too short.", "error")
         swal({
           title: "BOO",
           text: "You just forfeited your turn because you did not submit an answer!",
@@ -158,7 +156,6 @@ $(document).ready(function(){
         $('#player2input').val("")
         new Audio('assets/sound/goatscream.mp3').play()
       } else if (!checkValidWord(str)) {
-        // swal("Uh oh!", "It seems like that's not a valid word.", "error")
         swal({
           title: "Uh oh!",
           text: "It seems like that's not a valid word.",
@@ -174,7 +171,6 @@ $(document).ready(function(){
         $('#player2input').val("")
         new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkPreviouslyPlayed(str)) {
-        // swal("Oppsy!", "That word has already been played.", "error")
         swal({
           title: "Oppsy!",
           text: "That word has already been played.",
@@ -190,7 +186,6 @@ $(document).ready(function(){
         $('#player2input').val("")
         new Audio('assets/sound/goatscream.mp3').play()
     } else if (!checkMinLength(str)) {
-        // swal("O dear!","Your word is too short.", "error")
         swal({
           title: "O dear!",
           text: "Your word is too short.",
@@ -206,7 +201,6 @@ $(document).ready(function(){
         $('#player2input').val("")
         new Audio('assets/sound/goatscream.mp3').play()
     } else {
-        // swal("Good job!", "Your answer has been accepted!", "success");
         swal({
           title: "Good job!",
           text: "Your answer has been accepted!",
@@ -219,7 +213,6 @@ $(document).ready(function(){
         new Audio('assets/sound/yes.mp3').play()
 
         player1score += checkScores($('#player1input').val())
-        console.log(checkScores($('#player1input').val()))
         player1Played.push($('#player1input').val())
         document.getElementById('player1score').textContent = "Score: " + player1score
         $('#player1input').val("")
@@ -281,26 +274,16 @@ $(document).ready(function(){
 
   // check user input upon submit button being clicked
   $('#player1submit').click(function() {
-    if (player1Counter === player2Counter) {
-      player1Counter++
-      checkUserInput($('#player1input').val())
-      $("#player1").slideToggle();
-      $("#player2").slideToggle();
-    } else {
-      swal("Hey you!","Player 2 has not played yet!", "error")
-      $('#player1input').val("")
-    }
+    player1Counter++
+    checkUserInput($('#player1input').val())
+    $("#player1").slideToggle();
+    $("#player2").slideToggle();
   })
   $('#player2submit').click(function() {
-    if (player1Counter - player2Counter === 1) {
-      player2Counter++
-      checkUserInput($('#player2input').val())
-      $("#player2").slideToggle();
-      $("#player1").slideToggle();
-    } else {
-      swal("Hey you!","Player 1 has not played yet!", "error")
-      $('#player2input').val("")
-    }
+    player2Counter++
+    checkUserInput($('#player2input').val())
+    $("#player2").slideToggle();
+    $("#player1").slideToggle();
     round++ // for displaying each round on the page
     document.getElementById('roundDisplay').textContent = "Round " + round + " of " + desiredRounds
     if (player2Counter === desiredRounds) {

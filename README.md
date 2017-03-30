@@ -23,7 +23,8 @@ Text inputs will rotate between the two players according to their turn. The inp
 ![](http://g.recordit.co/S7LVVeuIgx.gif)
 
 Scores will be tabulated according to the above guide and a winner will be declared at the end of three rounds.
-![](assets/img/player2wins.jpg)
+![](assets/img/player2wins.jpg
+  )
 
 
 ## Built With
@@ -100,4 +101,4 @@ I would always have a checklist of tasks beside me as I was working on my game. 
 
 ## Acknowledgements
 
-[:)](https://github.com/siawyoung) 
+[:)](https://github.com/siawyoung)
