@@ -15,7 +15,7 @@ Any words less than three characters long will be considered invalid.
 
 No points will be awarded if a word has been played by ANY player in the same game, so be sure to play all your best possible words as early in the game as possible!
 
-[Play it here :3](https://wdi-sg.github.io/wdi-project-1-imouto2005/)
+[Play it here :3](https://imouto2005.github.io/wdi-project-1-imouto2005/)
 
 ## Gameplay
 
